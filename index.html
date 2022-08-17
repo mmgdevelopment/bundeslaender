@@ -5,8 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bundesländer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="bundesland.js"></script>
+    <script src="script.js"></script>
 </head>
-<body>
-    
+<body onload="init()"> 
+    <div id="container">
+        <h1>BUNDESLÄNDER</h1>
+        <div id ="content">
+            <a href="${bundesland.url}" class="card" id="${i}">
+                <h2>${bundesland.name}</h2>
+                <span>${bundesland.population}</span>
+            </a>
+        </div> 
+        <div id="filter-container">
+        </div>
+    </div>
 </body>
-</html>
+</html> 
