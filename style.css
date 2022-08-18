@@ -17,10 +17,12 @@ h1 {
     justify-content: center;
     flex-direction: column;
     justify-content: center;
+    padding: 0 10px;
+
 }
 #content{
-    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(270px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
 }
 h2{
     margin: 10px;
@@ -37,7 +39,15 @@ span{
     background-color: white;
     border: 10px solid rgb(238, 238, 238);
     margin: 5px;
-    flex: 30%;
+    width: calc(33.33% - 10px);
+    box-sizing: border-box;
+    transition: border ease-in-out 125ms;
+}
+
+.card:hover{
+    border: 10px solid rgba(0,0,0,0.2);
+    transition: border ease-in-out 125ms;
+
 }
 a{
     color: black;
@@ -56,3 +66,25 @@ a{
     margin: 5px;
     cursor: pointer;
 }
+
+@media (max-width: 800px) {
+    .card{
+        width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 500px) {
+    .card{
+        width: calc(100% - 10px);
+    }
+}
+
+@media (max-width: 335px) {
+   h1{
+    font-size: 24px;
+   }
+   h2{
+    font-size: 16px;
+   }
+}
+
